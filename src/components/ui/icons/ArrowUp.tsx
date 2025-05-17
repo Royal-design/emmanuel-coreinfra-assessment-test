@@ -13,8 +13,8 @@ export const ArrowUp: React.FC<IconProps> = ({ color = "#29A174" }) => {
       <path
         d="M1 7L7 1M7 1H3M7 1V5"
         stroke={color}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

@@ -29,6 +29,7 @@ import { User } from "@/components/ui/icons/User";
 import { Card } from "@/components/ui/icons/Card";
 import { Logout } from "@/components/ui/icons/Logout";
 import cardInfra from "@/assets/card-infra.png";
+import { Button } from "@/components/ui/button";
 
 export const items = [
   {
@@ -73,7 +74,7 @@ export const items = [
   },
   {
     title: "Block/Unblock Card",
-    url: "unblock-card",
+    url: "block-card",
     icon: BlockCard
   },
   {
@@ -101,7 +102,6 @@ export const items = [
 export const DashboardSidebar: React.FC = () => {
   const location = useLocation();
   const isDashboard = location.pathname === "/dashboard";
-  const isLogout = location.pathname === "/logout";
   return (
     <Sidebar className="bg-background-sidebar  text-white border-none px-2">
       <SidebarHeader className="bg-background-sidebar pt-[27px] pb-[31px]">
@@ -136,7 +136,7 @@ export const DashboardSidebar: React.FC = () => {
         </SidebarGroup>
 
         {/* Main Menu */}
-        <SidebarGroup className="py-0 mb-[123px]">
+        <SidebarGroup className="py-0">
           <SidebarGroupLabel className="uppercase font-medium text-[8.5px] text-secondary-gray font-satoshi ml-5 mt-4">
             Main Menu
           </SidebarGroupLabel>
@@ -166,29 +166,15 @@ export const DashboardSidebar: React.FC = () => {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-        {/* logout Item */}
-        <SidebarGroup className="py-0">
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <NavLink
-                    to="/logout"
-                    end
-                    className="flex items-center gap-3 text-xs font-satoshi py-5"
-                  >
-                    <Logout
-                      color={isLogout ? "var(--primary-blue)" : "white"}
-                    />
-                    <span className="text-primary-gray">Logout</span>
-                  </NavLink>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className=" px-3 pb-8 pt-10 bg-background-sidebar">
+      <SidebarFooter className=" px-3 pb-8 pt-5 bg-background-sidebar">
+        <Button
+          className="flex items- cursor-pointer bg-transparent mb-8 hover:bg-transparent justify-start text-xs rounded-md transition-colors "
+          style={{ padding: 0 }}
+        >
+          <Logout />
+          <span className="text-white">Logout</span>
+        </Button>
         <div className="flex flex-col">
           <p className="text-[8.5px] font-medium uppercase font-satoshi text-secondary-gray mb-1">
             Powered By

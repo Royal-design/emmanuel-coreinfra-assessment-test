@@ -13,8 +13,8 @@ export const Chevron: React.FC<IconProps> = ({ color = "#808080" }) => {
       <path
         d="M1 9L5 5L1 1"
         stroke={color}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

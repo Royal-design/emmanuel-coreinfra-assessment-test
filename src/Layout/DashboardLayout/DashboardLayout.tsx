@@ -20,7 +20,7 @@ export const DashboardLayout: React.FC = () => {
     >
       <DashboardSidebar />
       <SidebarInset>
-        <div className="md:hidden">
+        <div className="md:hidden fixed top-2 -left-1 z-20">
           <SidebarTrigger />
         </div>
         <Navbar />
