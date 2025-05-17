@@ -117,12 +117,28 @@ export const WeeklyIncomeChart: React.FC = () => {
                 interval={0}
               />
               <Tooltip cursor={false} content={<CustomTooltip />} />
+              <svg>
+                <defs>
+                  <filter id="dropshadow" height="150%">
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+                    <feOffset dx="2" dy="2" result="offsetblur" />
+                    <feFlood floodColor="#01A4AF78" />
+                    <feComposite in2="offsetblur" operator="in" />
+                    <feMerge>
+                      <feMergeNode />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+              </svg>
+
               <Line
                 type="natural"
                 dataKey="income"
                 stroke="#4DAF01"
                 strokeWidth={2}
                 dot={false}
+                filter="url(#dropshadow)"
               />
             </LineChart>
           </ResponsiveContainer>
