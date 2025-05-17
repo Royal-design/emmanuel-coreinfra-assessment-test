@@ -4,6 +4,8 @@ This project is a frontend dashboard implementation based on the provided Figma 
 
 ---
 
+🔗 [click the link to access the site](https://core-infra-assessment-test.vercel.app/)
+
 ## Project Overview
 
 This dashboard application was built to meet the specifications outlined in the Figma design file provided for the Core Infrastructure frontend test. The dashboard includes components such as charts, tables, navigation, aiming for clean UI and responsiveness.
