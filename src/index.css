@@ -1,0 +1,96 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901,1,2&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant hover (&:hover);
+
+@theme inline {
+  --font-satoshi: "Satoshi", sans-serif;
+
+  /* Background Colors */
+  --color-background-light-blue: var(--background-light-blue);
+  --color-background-sidebar: var(--background-sidebar);
+  --color-background-default: var(--background-default);
+  --color-background-light-green: var(--background-light-green);
+  --color-background-light-blue: var(--background-light-blue);
+  --color-background-lighter-blue: var(--background-lighter-blue);
+
+  /* Primary Colors */
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-green: var(--primary-green);
+  --color-primary-blue: var(--primary-blue);
+  --color-primary-gray: var(--primary-gray);
+
+  /* Secondary Colors */
+  --color-secondary: var(--secondary);
+  --color-secondary-gray: var(--secondary-gray);
+
+  /* Border Colors */
+  --color-border-primary-gray: var(--border-primary-gray);
+  --color-border-primary-dark: var(--border-primary-dark);
+  --color-border-secondary-gray: var(--border-secondary-gray);
+  --color-border-dark: var(--border-dark);
+
+  /* Grayscale */
+  --color-gray-light: var(--gray-light);
+  --color-gray-dark: var(--gray-dark);
+}
+
+:root {
+  /* Background Colors */
+  --background-light-blue: #e4f0ff;
+  --background-sidebar: #002f6c;
+  --background-default: #ffffff;
+  --background-light-green: #effaf6;
+  --background-light-blue: #f1f7ff;
+  --background-lighter-blue: #f8fbff;
+
+  /* Primary Colors */
+  --primary: #121212;
+  --primary-dark: #000000;
+  --primary-green: #29a174;
+  --primary-blue: #014daf;
+  --primary-gray: #d0d5dd;
+
+  /* Secondary Colors */
+  --secondary: #001735;
+  --secondary-gray: #7e8b9c;
+
+  /* Border Colors */
+  --border-primary-gray: #dededf;
+  --border-primary-dark: #aebac9;
+  --border-secondary-gray: #d0d5dd;
+  --border-dark: #e2e2e2;
+
+  /* Grayscale */
+  --gray-light: #dededf;
+  --gray-dark: #344054;
+}
+
+@layer base {
+  * {
+    @apply border-white;
+  }
+  body {
+    @apply bg-white;
+  }
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.active {
+  background: rgba(228, 240, 255, 1);
+  color: var(--primary-blue);
+  border-radius: 8px;
+}
+.bar-instant:hover {
+  fill: #87ceeb;
+  cursor: pointer;
+}
